@@ -57,7 +57,7 @@ public class UserInquriy {
         System.out.println("\n OK . we will solve your problem immediately . please check your emile");
     }
 
-    void sendEmile() {
+    void SendEmile() {
         System.out.println("_________________________");
         System.out.println("Welcome "+ userName +" . ");
         System.out.println("\n Our emile is : cakeStore111@gmail.com ");
