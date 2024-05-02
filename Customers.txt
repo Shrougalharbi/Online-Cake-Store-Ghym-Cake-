@@ -1,0 +1,5 @@
+Customer Name: Raghad Phone Number: 0511111111
+Customer Name: Lama Phone Number: 0522222222
+Customer Name: Shahad Phone Number: 0533333333
+Customer Name: Narjes Phone Number: 0544444444
+Customer Name: Shroug Phone Number: 0555555555
