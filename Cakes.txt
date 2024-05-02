@@ -1,0 +1,12 @@
+
+Chocolate Eid Chocolate 1 small medium large 25 30 40 
+Vanilla Wedding Vanilla 1 small medium large 35 45 55 
+Red-Velvet Eid Red-Velvet 2 small medium large 25 35 55 
+Lemon Graduation Lemon 3 small medium large 30 45 55 
+Carrot Holiday Carrot 2 small medium large 25 35 45 
+Marble Graduation Chocolate&Vanilla 3 small medium large 25 35 45 
+Black-Forest Eid Black-Forest 1 small medium large 25 30 40 
+Strawberry Wedding Strawberry 2 small medium large 35 45 55 
+Coconut Eid Coconut 2 small medium large 25 35 55 
+Pineapple Holiday Pineapple 1 small medium large 25 35 45
+Blueberry Graduation Blueberry 2 small medium large 25 35 45
