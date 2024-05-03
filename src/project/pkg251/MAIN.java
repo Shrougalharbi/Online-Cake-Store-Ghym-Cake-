@@ -36,7 +36,14 @@ public class MAIN {
 
         Cake Cakename=new Cake();
         CakeReview Customer = new CakeReview("Shroug Alahrbi" ,"This cake was delicious and moist. The frosting was perfect and not too sweet. I would definitely recommend it!", 5);
-      
+        
+        Payment pay=new Payment();
+        pay.choosePaymentMethod();
+        System.out.println("Enter Credit Card Number: ");
+        String number=input.nextLine();
+        pay.addCreditCard(number);
+                
+        
        
         
         System.out.println(Cakename.getCake_name()+Customer.addString());

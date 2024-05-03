@@ -63,9 +63,9 @@ class Order {
         writer.write("Flavor: " + cakeOrdered.getFlavor() + "\n");
         writer.write("Layers: " + cakeOrdered.getLayers() + "\n");
         writer.write("Occasion: " + cakeOrdered.getOccasion() + "\n");
-        writer.write("Size: "+ cakeOrdered.getCSize());
+        writer.write("Size: "+ cakeOrdered.getSize());
         writer.write("\nPrice: ");
-        writer.write(cakeOrdered.getPrice(cakeOrdered.getCSize()) + " ");
+        writer.write(cakeOrdered.getPrice(cakeOrdered.getSize()) + " ");
         writer.write("\n\n");
         writer.close();
         System.out.println("Order details written to file successfully!");
