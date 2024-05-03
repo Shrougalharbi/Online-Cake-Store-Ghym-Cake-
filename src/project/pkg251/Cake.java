@@ -16,6 +16,11 @@ import java.util.Scanner;
     private String[] servings;
     private String occasion;
     private String flavor;
+
+    public Cake() {
+    }
+    
+    
     
     
   public Cake(String cake_name,String occasion,String flavor,int layers,String[] size,double[] prices,String[] servings) {

@@ -34,6 +34,11 @@ public class MAIN {
                 System.exit(0);
         }
 
-
+        Cake Cakename=new Cake();
+        CakeReview Customer = new CakeReview("Shroug Alahrbi" ,"This cake was delicious and moist. The frosting was perfect and not too sweet. I would definitely recommend it!", 5);
+       // String cakename="Lemon Gra";
+       
+        
+        System.out.println(Cakename.getCake_name()+Customer.addString());
     }
 }
