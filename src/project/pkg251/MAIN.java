@@ -34,7 +34,6 @@ public class MAIN {
                 System.exit(0);
         }
 
-        System.out.println("____________________________________\n");
 
     }
 }
