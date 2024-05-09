@@ -13,6 +13,7 @@ public class CakeReview {
   private String reviewerName;
   private String reviewText;
   private int rating; // Out of 5 stars
+  
 
   public CakeReview(String reviewerName, String reviewText, int rating) {
     this.reviewerName = reviewerName;
@@ -49,7 +50,7 @@ public class CakeReview {
    public String addString() {
     return "Review by " + reviewerName + "\nRating: " + rating + " stars\n" + reviewText;
   }
-
+  
   @Override
   public String toString() {
     return "";

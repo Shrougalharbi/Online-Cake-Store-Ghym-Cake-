@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package project.pkg251;
-
 import java.io.*;
 import java.util.*;
 
 
-class Order {
+public class Order {
     private String customerName;
     private String phoneNumber;
     private Cake cakeOrdered;
@@ -65,7 +64,7 @@ class Order {
         writer.write("Occasion: " + cakeOrdered.getOccasion() + "\n");
         writer.write("Size: "+ cakeOrdered.getSize());
         writer.write("\nPrice: ");
-        writer.write(cakeOrdered.getPrice(cakeOrdered.getSize()) + " ");
+        writer.write(cakeOrdered.getPrice(cakeOrdered.getCSize()) + " ");
         writer.write("\n\n");
         writer.close();
         System.out.println("Order details written to file successfully!");
@@ -91,11 +90,5 @@ class Order {
         return false;
     }
 
-
-    public static void main(String[] args) throws FileNotFoundException {
-        Cake cake= new Cake();
-        Order order = new Order();
-        order.printOrderDetailsToFile();
-    }
 }
-
+ 

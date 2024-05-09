@@ -1,5 +1,4 @@
-
-package project251;
+package project.pkg251;
 
 import java.util.ArrayList;
 import java.util.List;
