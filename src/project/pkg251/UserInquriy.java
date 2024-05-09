@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserInquriy {
 
-    private String userName;
+    private static String userName;
     private String userEmail;
     private int inquiryNumber;
 
@@ -89,13 +89,14 @@ public class UserInquriy {
     //==================================================================
 
     //METHOOD TO CHAT WITH OWNER
-    void liveChat() {
+     public static String liveChat() {
         Scanner Chat = new Scanner(System.in);
 
         System.out.println("_________________________");
         System.out.println("Welcome " + userName + " . How i can help you ? \n");
-        String User = Chat.next();
+        String User = Chat.nextLine();
         System.out.println("\n OK . we will solve your problem immediately . please check your emile");
+        return "i can not "+User ;
     }
     //==================================================================
 
