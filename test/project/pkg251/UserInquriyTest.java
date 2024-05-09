@@ -1,131 +1,46 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 package project.pkg251;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author amsjf
  */
 public class UserInquriyTest {
-    
+
     public UserInquriyTest() {
     }
-    
-    @BeforeAll
+
+    @BeforeClass
     public static void setUpClass() {
     }
-    
-    @AfterAll
+
+    @AfterClass
     public static void tearDownClass() {
     }
-    
-    @BeforeEach
+
+    @Before
     public void setUp() {
     }
-    
-    @AfterEach
+
+    @After
     public void tearDown() {
-    }
-
-    /**
-     * Test of getUserName method, of class UserInquriy.
-     */
-    @Test
-    public void testGetUserName() {
-        System.out.println("getUserName");
-        UserInquriy instance = null;
-        String expResult = "";
-        String result = instance.getUserName();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getUserEmail method, of class UserInquriy.
-     */
-    @Test
-    public void testGetUserEmail() {
-        System.out.println("getUserEmail");
-        UserInquriy instance = null;
-        String expResult = "";
-        String result = instance.getUserEmail();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getInquiryNumber method, of class UserInquriy.
-     */
-    @Test
-    public void testGetInquiryNumber() {
-        System.out.println("getInquiryNumber");
-        UserInquriy instance = null;
-        int expResult = 0;
-        int result = instance.getInquiryNumber();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setUserName method, of class UserInquriy.
-     */
-    @Test
-    public void testSetUserName() {
-        System.out.println("setUserName");
-        String userName = "";
-        UserInquriy instance = null;
-        instance.setUserName(userName);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setUserEmail method, of class UserInquriy.
-     */
-    @Test
-    public void testSetUserEmail() {
-        System.out.println("setUserEmail");
-        String userEmail = "";
-        UserInquriy instance = null;
-        instance.setUserEmail(userEmail);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setInquiryNumber method, of class UserInquriy.
-     */
-    @Test
-    public void testSetInquiryNumber() {
-        System.out.println("setInquiryNumber");
-        int inquiryNumber = 0;
-        UserInquriy instance = null;
-        instance.setInquiryNumber(inquiryNumber);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of start method, of class UserInquriy.
-     */
-    @Test
-    public void testStart() {
-        System.out.println("start");
-        UserInquriy.start();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -133,11 +48,16 @@ public class UserInquriyTest {
      */
     @Test
     public void testLiveChat() {
-        System.out.println("liveChat");
-        UserInquriy instance = null;
-        instance.liveChat();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String input = "add review";
+
+        ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        String expectedResult = "i can not add review";
+        String result = UserInquriy.liveChat();
+
+        assertEquals(expectedResult, result);
+       
     }
 
     /**
@@ -145,11 +65,19 @@ public class UserInquriyTest {
      */
     @Test
     public void testSendEmile() {
-        System.out.println("SendEmile");
-        UserInquriy instance = null;
-        instance.SendEmile();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("");
+        UserInquriy inquiry = new UserInquriy("shahd", "shahd@gmile.com", 123);
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+
+        inquiry.SendEmile();
+
+        String expectedResult = "_________________________" + System.getProperty("line.separator");
+        expectedResult += "Welcome shahd . " + System.getProperty("line.separator");
+        expectedResult += "\n Our emile is : cakeStore111@gmail.com " + System.getProperty("line.separator");
+
+        assertEquals(expectedResult, out.toString());
+
     }
-    
+
 }

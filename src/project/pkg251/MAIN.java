@@ -26,11 +26,13 @@ public class MAIN {
               Cake cake= new Cake();
                  cake.Search();
                 break;
-            //Rating();
+            //Order()
             case 2:
                Order order = new Order();
                   order.printOrderDetailsToFile();
                break;
+               
+               //Rating();
             case 3:
                System.out.println("Enter the name of the cake you want to rate : ");
                String name= input.next();
