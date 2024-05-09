@@ -14,10 +14,10 @@ public class Order {
     private Cake cakeOrdered;
 
     public Order() throws FileNotFoundException {
-        enterOrderDetails();
+        //enterOrderDetails();
     }
 
-    private void enterOrderDetails() throws FileNotFoundException {
+    public void enterOrderDetails() throws Exception {
         Scanner scanner = new Scanner(System.in);
         
         // Prompt user for customer details
@@ -46,14 +46,14 @@ public class Order {
         // Assuming cakes ArrayList is already populated with cake objects   
         cakeOrdered = new Cake();
         cakeOrdered=cakeOrdered.findCustomerCake(cakeName, flavor, layers, size);
-        
-        
+        System.out.println(cakeOrdered);
+        printOrderDetailsToFile(cakeOrdered,size, customerName, phoneNumber);
 
         scanner.close();
     }
 
-    public void printOrderDetailsToFile() {
-    try {
+    public void printOrderDetailsToFile(Cake cakeOrdered,String size,String customerName, String phoneNumber)throws Exception {
+   
         FileWriter writer = new FileWriter("OrderDetails.txt", true);
         writer.write("Customer Name: " + customerName + "\n");
         writer.write("Phone Number: " + phoneNumber + "\n");
@@ -62,15 +62,11 @@ public class Order {
         writer.write("Flavor: " + cakeOrdered.getFlavor() + "\n");
         writer.write("Layers: " + cakeOrdered.getLayers() + "\n");
         writer.write("Occasion: " + cakeOrdered.getOccasion() + "\n");
-        writer.write("Size: "+ cakeOrdered.getSize());
+        writer.write("Size: "+ size);
         writer.write("\nPrice: ");
-        writer.write(cakeOrdered.getPrice(cakeOrdered.getCSize()) + " ");
-        writer.write("\n\n");
+        writer.write(cakeOrdered.getPrice(cakeOrdered.getCSize()) + "\n");
         writer.close();
-        System.out.println("Order details written to file successfully!");
-    } catch (IOException e) {
-        System.err.println("An error occurred while writing to file: " + e.getMessage());
-    }
+
 }
 
     public boolean checkCustomerExists(String customerName, String phoneNumber) throws FileNotFoundException  {

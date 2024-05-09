@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class MAIN {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, Exception {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Cake store");
@@ -29,7 +29,7 @@ public class MAIN {
             //Order()
             case 2:
                Order order = new Order();
-                  order.printOrderDetailsToFile();
+                  order.enterOrderDetails();
                break;
                
                //Rating();

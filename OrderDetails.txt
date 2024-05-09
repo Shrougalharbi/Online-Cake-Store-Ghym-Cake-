@@ -1,0 +1,18 @@
+Customer Name: Raghad
+Phone Number: 0511111111
+Cake Details: 
+Cake Name: Chocolate
+Flavor: Chocolate
+Layers: 1
+Occasion: Eid
+Size: small
+Price: 25.0
+Customer Name: Raghad
+Phone Number: 0511111111
+Cake Details: 
+Cake Name: Chocolate
+Flavor: Chocolate
+Layers: 1
+Occasion: Eid
+Size: small
+Price: 25.0
