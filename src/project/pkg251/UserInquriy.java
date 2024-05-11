@@ -57,7 +57,7 @@ public class UserInquriy {
         int inquiryNumber = (int) (Math.random() * 10);
 
         System.out.println("\n If you want a live chat please Enter 1 : ");
-        System.out.println("Or If you need Emile please Enter 2 : ");
+        System.out.println("Or If you need Email please Enter 2 : ");
         int user = input.nextInt();
 
         // Create UserInquiry object 
@@ -74,7 +74,7 @@ public class UserInquriy {
                     break;
 
                 default:
-                    System.out.println("Invalid input. Please enter 1 for live chat or 2 for email support.");
+                    System.out.println("Invalid input. Please enter 1 for live chat or 2 for Email support.");
                     user = input.nextInt();
                     continue;
 
@@ -95,7 +95,7 @@ public class UserInquriy {
         System.out.println("_________________________");
         System.out.println("Welcome " + userName + " . How i can help you ? \n");
         String User = Chat.nextLine();
-        System.out.println("\n OK . we will solve your problem immediately . please check your emile");
+        System.out.println("\n OK . we will solve your problem immediately . please check your Email");
         return "i can not "+User ;
     }
     //==================================================================
@@ -104,6 +104,6 @@ public class UserInquriy {
     void SendEmile() {
         System.out.println("_________________________");
         System.out.println("Welcome " + userName + " . ");
-        System.out.println("\n Our emile is : cakeStore111@gmail.com ");
+        System.out.println("\n Our Email is : cakeStore111@gmail.com ");
     }
 }

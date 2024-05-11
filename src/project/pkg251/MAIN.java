@@ -34,11 +34,21 @@ public class MAIN {
                
                //Rating();
             case 3:
-               System.out.println("Enter the name of the cake you want to rate : ");
+               System.out.println("Enter your name: ");
                String name= input.next();
+               
+               System.out.println("Enter the name of the cake you want to rate : ");
+               String Cake= input.next();
+            
+               System.out.println("Enter Your Rate : ");
+               String rate= input.next();
+               
+               System.out.println("Rate From 0 to 5 Stars: ");
+               int rateing= input.nextInt();
+               
                Cake ratecake= new Cake();
-               ratecake=ratecake.toRate(name);
-               CakeReview customer = new CakeReview("Shroug Alahrbi" ,"This cake was delicious and moist. The frosting was perfect and not too sweet. I would definitely recommend it!", 5);
+               ratecake=ratecake.toRate(Cake);
+               CakeReview customer = new CakeReview(name ,rate, rateing);
                ratecake.set(customer);
                System.out.println(ratecake.review());
                break;
